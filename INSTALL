@@ -1,0 +1,9 @@
+Building FlightCoin
+
+See doc/readme-qt.rst for instructions on building flightcoin-qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of FlightCoin.
+
+See doc/build-*.txt for instructions on building flightcoin,
+the intended-for-services, no-graphical-interface, reference
+implementation of FlightCoin.
