@@ -698,7 +698,7 @@ int CMerkleTx::GetBlocksToMaturity() const
 {
     if (!IsCoinBase())
         return 0;
-    return max(0, (COINBASE_MATURITY+10) - GetDepthInMainChain());
+    return max(0, (COINBASE_MATURITY+4) - GetDepthInMainChain());
 }
 
 
@@ -3458,7 +3458,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey)
 
         // Collect transactions into block
         map<uint256, CTxIndex> mapTestPool;
-        uint64 nBlockSize = 1000;
+        uint64 nBlockSize = 100;
         uint64 nBlockTx = 0;
         int nBlockSigOps = 100;
         while (!mapPriority.empty())
