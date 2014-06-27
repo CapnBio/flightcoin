@@ -1,0 +1,199 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FlightCoin version v0.6.3.0-ga19eb2d-beta (2014-06-06 11:22:14 -0400)
+Startup time: 06/27/14 04:39:36
+Default data directory /root/.flightcoin
+Used data directory /root/.flightcoin
+Bound to [::]:7770
+Bound to 0.0.0.0:7770
+Loading block index...
+dbenv.open LogDir=/root/.flightcoin/database ErrorFile=/root/.flightcoin/db.log
+4d683a87d2301c93a5a187672b9668c28b08027dbbbf2e24a1ba2ad866a1be39
+4d683a87d2301c93a5a187672b9668c28b08027dbbbf2e24a1ba2ad866a1be39
+ce5b7d63e5d2cf1b01b005a02d1d5baab9c61c6a97c2e2c7ec18a83142d99a18
+CBlock(hash=4d683a87d2301c93a5a1, PoW=00000b34418b38c4f7ae, ver=1, hashPrevBlock=00000000000000000000, hashMerkleRoot=ce5b7d63e5, nTime=1401522145, nBits=1e0ffff0, nNonce=309770, vtx=1)
+  CTransaction(hash=ce5b7d63e5, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+    CTxIn(COutPoint(0000000000, -1), coinbase 04ffff001d010441746f646f3a207265706c616365207769746820736f6d657468696e67207468617420656e7375726573206e6f207072656d696e696e6720746f6f6b20706c616365)
+    CTxOut(error)
+  vMerkleTree: ce5b7d63e5 
+SetBestChain: new best=4d683a87d2301c93a5a1  height=0  work=1048592  date=05/31/14 07:42:25
+ block index              25ms
+Loading wallet...
+nFileVersion = 60300
+Performing wallet upgrade to 60000
+keypool added key 1, size=1
+keypool added key 2, size=2
+keypool added key 3, size=3
+keypool added key 4, size=4
+keypool added key 5, size=5
+keypool added key 6, size=6
+keypool added key 7, size=7
+keypool added key 8, size=8
+keypool added key 9, size=9
+keypool added key 10, size=10
+keypool added key 11, size=11
+keypool added key 12, size=12
+keypool added key 13, size=13
+keypool added key 14, size=14
+keypool added key 15, size=15
+keypool added key 16, size=16
+keypool added key 17, size=17
+keypool added key 18, size=18
+keypool added key 19, size=19
+keypool added key 20, size=20
+keypool added key 21, size=21
+keypool added key 22, size=22
+keypool added key 23, size=23
+keypool added key 24, size=24
+keypool added key 25, size=25
+keypool added key 26, size=26
+keypool added key 27, size=27
+keypool added key 28, size=28
+keypool added key 29, size=29
+keypool added key 30, size=30
+keypool added key 31, size=31
+keypool added key 32, size=32
+keypool added key 33, size=33
+keypool added key 34, size=34
+keypool added key 35, size=35
+keypool added key 36, size=36
+keypool added key 37, size=37
+keypool added key 38, size=38
+keypool added key 39, size=39
+keypool added key 40, size=40
+keypool added key 41, size=41
+keypool added key 42, size=42
+keypool added key 43, size=43
+keypool added key 44, size=44
+keypool added key 45, size=45
+keypool added key 46, size=46
+keypool added key 47, size=47
+keypool added key 48, size=48
+keypool added key 49, size=49
+keypool added key 50, size=50
+keypool added key 51, size=51
+keypool added key 52, size=52
+keypool added key 53, size=53
+keypool added key 54, size=54
+keypool added key 55, size=55
+keypool added key 56, size=56
+keypool added key 57, size=57
+keypool added key 58, size=58
+keypool added key 59, size=59
+keypool added key 60, size=60
+keypool added key 61, size=61
+keypool added key 62, size=62
+keypool added key 63, size=63
+keypool added key 64, size=64
+keypool added key 65, size=65
+keypool added key 66, size=66
+keypool added key 67, size=67
+keypool added key 68, size=68
+keypool added key 69, size=69
+keypool added key 70, size=70
+keypool added key 71, size=71
+keypool added key 72, size=72
+keypool added key 73, size=73
+keypool added key 74, size=74
+keypool added key 75, size=75
+keypool added key 76, size=76
+keypool added key 77, size=77
+keypool added key 78, size=78
+keypool added key 79, size=79
+keypool added key 80, size=80
+keypool added key 81, size=81
+keypool added key 82, size=82
+keypool added key 83, size=83
+keypool added key 84, size=84
+keypool added key 85, size=85
+keypool added key 86, size=86
+keypool added key 87, size=87
+keypool added key 88, size=88
+keypool added key 89, size=89
+keypool added key 90, size=90
+keypool added key 91, size=91
+keypool added key 92, size=92
+keypool added key 93, size=93
+keypool added key 94, size=94
+keypool added key 95, size=95
+keypool added key 96, size=96
+keypool added key 97, size=97
+keypool added key 98, size=98
+keypool added key 99, size=99
+keypool added key 100, size=100
+keypool added key 101, size=101
+keypool reserve 1
+keypool keep 1
+ wallet                  280ms
+Loading addresses...
+ERROR: CAddrman::Read() : open failed
+Invalid or missing peers.dat; recreating
+Loaded 0 addresses from peers.dat  0ms
+mapBlockIndex.size() = 1
+nBestHeight = 0
+setKeyPool.size() = 100
+mapWallet.size() = 0
+mapAddressBook.size() = 1
+Done loading
+send version message: version 60001, blocks=0, us=0.0.0.0:0, them=0.0.0.0:0, peer=127.0.0.1:0
+AddLocal(107.170.132.241:7770,1)
+IPv4 eth0: 107.170.132.241
+ThreadRPCServer started
+ThreadDNSAddressSeed started
+Loading addresses from DNS seeds (could take a while)
+0 addresses found from DNS seeds
+ThreadDNSAddressSeed exited
+ThreadSocketHandler started
+ThreadOpenAddedConnections started
+ThreadOpenConnections started
+trying connection 192.241.198.182:7770 lastseen=362178.9hrs
+ThreadMessageHandler started
+ThreadIRCSeed started
+Flushed 0 addresses to peers.dat  2ms
+IRC :pelican.heliacal.net NOTICE AUTH :*** Looking up your hostname...
+connect() failed after select(): Connection refused
+IRC :pelican.heliacal.net NOTICE AUTH :*** Couldn't look up your hostname
+IRC SENDING: NICK u73qRPeXepSYX6W
+IRC SENDING: USER u73qRPeXepSYX6W 8 * : u73qRPeXepSYX6W
+IRC :pelican.heliacal.net 001 u73qRPeXepSYX6W :Welcome to the LFNet Internet Relay Chat Network u73qRPeXepSYX6W
+IRC :pelican.heliacal.net 002 u73qRPeXepSYX6W :Your host is pelican.heliacal.net[173.246.103.92/6667], running version hybrid-7.2.3
+IRC :pelican.heliacal.net 003 u73qRPeXepSYX6W :This server was created Jun 28 2011 at 14:26:11
+IRC :pelican.heliacal.net 004 u73qRPeXepSYX6W pelican.heliacal.net hybrid-7.2.3 CDGabcdfgiklnorsuwxyz biklmnopstveI bkloveI
+GetMyExternalIP() received [107.170.132.241] 107.170.132.241:0
+GetMyExternalIP() returned 107.170.132.241
+AddLocal(107.170.132.241:7770,5)
+IRC SENDING: USERHOST u73qRPeXepSYX6W
+IRC :pelican.heliacal.net 302 u73qRPeXepSYX6W :u73qRPeXepSYX6W=+u73qRPeXep@107.170.132.241 
+GetIPFromIRC() got userhost 107.170.132.241
+GetIPFromIRC() returned 107.170.132.241
+AddLocal(107.170.132.241:7770,4)
+IRC SENDING: NICK u73qRPeXeua7gza
+IRC SENDING: JOIN #flightcoin00
+IRC SENDING: WHO #flightcoin00
+IRC got join
+Added 107.170.132.241:7771 from 173.246.103.92: 0 tried, 1 new
+IRC got new address: 107.170.132.241:7771
+IRC got who
+IRC got who
+Added 107.170.160.17:7771 from 173.246.103.92: 0 tried, 2 new
+IRC got new address: 107.170.160.17:7771
+Flushing wallet.dat
+Flushed wallet.dat 2ms

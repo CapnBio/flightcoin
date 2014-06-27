@@ -29,7 +29,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x09ebd987d0d85433320f7fa22a11fe5b93639686dd89e28f3181ae173740f1fb");
+uint256 hashGenesisBlock("0x4d683a87d2301c93a5a187672b9668c28b08027dbbbf2e24a1ba2ad866a1be39");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -1987,7 +1987,7 @@ bool LoadBlockIndex(bool fAllowNew)
         pchMessageStart[1] = 0xc0;
         pchMessageStart[2] = 0xb8;
         pchMessageStart[3] = 0xdb;
-        hashGenesisBlock = uint256("0xdc0b17f560c2d81df838bd9cf7c6247cfa69a44cb06f3d26f92b32c86140764f");
+        hashGenesisBlock = uint256("0x4d683a87d2301c93a5a187672b9668c28b08027dbbbf2e24a1ba2ad866a1be39");
     }
 
     //
@@ -2006,17 +2006,16 @@ bool LoadBlockIndex(bool fAllowNew)
         if (!fAllowNew)
             return false;
     
-	// Genesis block:
-	// block.nTime = 1394520462 
-	// block.nNonce = 2085386442 
-	// block.GetHash = 384b060671f4a93948e9c168216dadb0ca2fbc54aa11c86b0345b6af1c59b2f5
-	// CBlock(hash=384b060671f4a93948e9, PoW=00000951e146b0026411, ver=1,
-	//  hashPrevBlock=00000000000000000000, hashMerkleRoot=5a2e19825b,
-	//  nTime=1394520462, nBits=1e0ffff0, nNonce=2085386442, vtx=1)
-	// CTransaction(hash=5a2e19825b, ver=1, vin.size=1, vout.size=1, nLockTime=0)
-	// CTxIn(COutPoint(0000000000, -1), coinbase 04ffff001d010441746f646f3a207265706c616365207769746820736f6d657468696e67207468617420656e7375726573206e6f207072656d696e696e6720746f6f6b20706c616365)
-	// CTxOut(error)
-	// vMerkleTree: 5a2e19825b
+	/* Genesis block:
+	block.nTime = 1401522145 
+block.nNonce = 309770 
+block.GetHash = 4d683a87d2301c93a5a187672b9668c28b08027dbbbf2e24a1ba2ad866a1be39
+CBlock(hash=4d683a87d2301c93a5a1, PoW=00000b34418b38c4f7ae, ver=1, hashPrevBlock=00000000000000000000, hashMerkleRoot=ce5b7d63e5, nTime=1401522145, nBits=1e0ffff0, nNonce=309770, vtx=1)
+  CTransaction(hash=ce5b7d63e5, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+    CTxIn(COutPoint(0000000000, -1), coinbase 04ffff001d010441746f646f3a207265706c616365207769746820736f6d657468696e67207468617420656e7375726573206e6f207072656d696e696e6720746f6f6b20706c616365)
+    CTxOut(error)
+  vMerkleTree: ce5b7d63e5 
+ */
         
         // Genesis block
         const char* pszTimestamp = "todo: replace with something that ensures no premining took place";
@@ -2024,7 +2023,7 @@ bool LoadBlockIndex(bool fAllowNew)
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 0;
+        txNew.vout[0].nValue = 10000;
         txNew.vout[0].scriptPubKey = CScript() << 0x0 << OP_CHECKSIG; // a privkey for that 'vanity' pubkey would be interesting ;)
         CBlock block;
         block.vtx.push_back(txNew);
@@ -2033,22 +2032,22 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1401522145;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 18600143;
+        block.nNonce   = 309770;
 
         if (fTestNet)
         {
-            block.nTime    = 1401327152;
-            block.nNonce   = 17560189;
+            block.nTime    = 1401522145;
+            block.nNonce   = 309770;
         }
 
         //// debug print
         printf("%s\n", block.GetHash().ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x5a2e19825b4162f68602039040f1e05d9f924ff00a3aff7327ca6abd6f3279bc"));
+        assert(block.hashMerkleRoot == uint256("0xce5b7d63e5d2cf1b01b005a02d1d5baab9c61c6a97c2e2c7ec18a83142d99a18"));
 
         // If genesis block hash does not match, then generate new genesis hash.
-        if (false && block.GetHash() != hashGenesisBlock)
+        if (true && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
